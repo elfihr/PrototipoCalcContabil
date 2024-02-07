@@ -41,18 +41,9 @@ let tetoInss = 0
         tetoInss =   tetoFaixa
     }
  }
-
- function imprimir(n){
-    return print.innerHTML += `${n}<br>`
-}
-
-function pulaLinha(){
-    return print.innerHTML += `<br>`
-}
-
-function real(n){
-    return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-}
+const imprimir = n =>  print.innerHTML += `${n}<br>`
+const pulaLinha = () => print.innerHTML += `<br>`
+const real = n => n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
 function SBisValid(n){
     if(Number(n) > 0){
@@ -64,7 +55,7 @@ function SBisValid(n){
 
 calcular.addEventListener('click', () => {
 
-    print.innerHTML = ''
+    print.innerHTML = '' 
 
     calcular.style.display ='none'
     recalcular.style.display='block'
